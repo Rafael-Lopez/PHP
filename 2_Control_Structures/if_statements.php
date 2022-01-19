@@ -30,4 +30,20 @@
     if ($one === $one_str) {
         echo '<p>Never printed :c</p>'; 
     }
+
+    // Ternary operator
+    $message = $is_logged_in ? '<h3>Welcome back, user!</h3>' : '<h3>Welcome to the site!</h3>'; 
+    echo $message;
+
+    $message = "<h3>Welcome" . ($is_logged_in ? '!' : 'back!') . "</h3>"; 
+    echo $message;
+
+    // isset: returns a boolean indicating whether a variable exists or not
+    echo isset($name) ? $name : 'Joe';
+
+    // elvis operator: if $name is null, then use the backup value. Notice the $name variable must exist. Otherwise, there's an error.
+    $name = 'Alice';
+    //$name = null;
+    $name = $name ?: 'Joe';
+    echo $name;
 ?>
